@@ -9,11 +9,15 @@
 
 namespace App\Controller;
 
-
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
 class LuckyController
 {
+    /**
+     * @return Response
+     * @Route("/lucky/humber")
+     */
     public function number()
     {
         $number = random_int(0, 100);
